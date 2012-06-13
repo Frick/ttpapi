@@ -17,6 +17,7 @@ if (ttpapi.bot !== undefined && ttpapi.bot.auth === true) {
     ttpapi.bot.emit('help', 'commands', function (data) {
         console.log(data);
     });
+}
 ```
 
 ### Server-side
@@ -58,7 +59,7 @@ The scope of the listener function is the socket which triggered the event (this
 
 ### new TTPAPI ( port=80:int [, options:obj] )
 
-Returns a ttpapi instance and starts socket.io listening on 'port' (defaults to port 80)
+Returns a ttpapi instance and starts socket.io listening on 'port' (defaults to port 80)  
 The 'options' object can contain any options that may be used with socket.io (ex: 'cert' and 'key' for SSL)
 Additionally, 'room_url' and 'auth' fields may be supplied to enhance security
 options.room_url can be a string representing the URL of the Turntable room that TTPAPI is listening for
