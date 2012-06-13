@@ -1,0 +1,19 @@
+{
+  "author": "Michael Frick <frick@turntableplus.fm> (http://turntableplus.fm)",
+  "name": "ttpapi",
+  "version": "0.9.0",
+  "description": "An API for communicating with Turntable Plus (TT+) clients.",
+  "keywords": ["turntable.fm", "turntable", "turntable plus", "tt+"],
+  "homepage": "http://turntableplus.fm",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/Frick/ttpapi.git"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "socket.io": "git://github.com/LearnBoost/socket.io.git#dbe6d5f740bcd8e2c93f2607ca699c0ac0a55cd8"
+  },
+  "engines": {
+    "node": ">= v0.6.0"
+  },
+}
