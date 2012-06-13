@@ -14,6 +14,6 @@
     "socket.io": "git://github.com/LearnBoost/socket.io.git#dbe6d5f740bcd8e2c93f2607ca699c0ac0a55cd8"
   },
   "engines": {
-    "node": ">= v0.6.0"
-  },
+    "node": ">= v0.4.0"
+  }
 }

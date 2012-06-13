@@ -92,12 +92,18 @@ TTPAPI.prototype.emit = function () {
     var args = [].slice.call(arguments), socket;
     socket = this.getSocket(args.shift());
     if (socket !== null) {
-        socket.emit(args);
+        socket.emit.apply(socket, args);
     }
 };
 
 TTPAPI.prototype.broadcast = function () {
-    this._io.sockets.emit(arguments);
+    var x, user;
+    for (x in this._users) {
+        user = this._users[x];
+        if (user.hasOwnProperty('auth') === true && user.auth === true) {
+            user.socket.emit.apply(user.socket, arguments);
+        }
+    }
 };
 
 TTPAPI.prototype.getSocket = function (userid) {
